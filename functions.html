@@ -4,11 +4,21 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <h1
-      onclick="if(this.innerHTML=='JavaScript')(this.innerHTML='Is fun')else (this.innerHTML='JavaScript')"
-    >
-      JavaScript
-    </h1>
-    <script></script>
+    <h1 id="heading" onclick="changeText(this)">JavaScript</h1>
+    <p id="addition"></p>
+    <script>
+      document.getElementById("addition").innerHTML = addNumbers(5, 10);
+      function changeText(element) {
+        if (document.getElementById("heading").innerHTML == "JavaScript") {
+          document.getElementById("heading").innerHTML = "Is fun";
+        } else {
+          document.getElementById("heading").innerHTML = "JavaScript";
+        }
+      }
+
+      function addNumbers(num1, num2) {
+        return num1 + num2;
+      }
+    </script>
   </body>
 </html>

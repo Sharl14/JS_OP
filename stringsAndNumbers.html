@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <p id="outputText"></p>
+    <script>
+      var text1 = "two";
+      var text2 = "1";
+
+      var number1 = stringToNumber(text1);
+      var number2 = stringToNumber(text2);
+
+      if (isNaN(number1) || isNaN(number2)) {
+        document.getElementById("outputText").innerHTML =
+          "One or both of the inputs are not valid numbers.";
+      } else {
+        document.getElementById("outputText").innerHTML = number1 + number2;
+      }
+
+      function stringToNumber(text) {
+        return parseInt(text);
+      }
+    </script>
+  </body>
+</html>
